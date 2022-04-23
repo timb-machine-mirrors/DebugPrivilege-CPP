@@ -1,5 +1,5 @@
 // This is just a Proof of Concept of using the RtlAdjustPrivilege function
-// Once the binary has been compiled, please check the following:
+// Once the code has been compiled, please check the following:
 // Open Process Explorer -> Right click on process -> Properties -> Security -> Now verify if SeBackupPrivilege has been added
 
 #include <windows.h>
