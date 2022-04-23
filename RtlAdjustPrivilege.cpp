@@ -74,7 +74,7 @@ int main() {
     }
     else
     {
-        cout << "[-] Registry hives were not dumped" << GetLastError() << endl;
+        cout << "[-] Failed to dump the registry hives " << GetLastError() << endl;
     };
     getchar();
 }
